@@ -28,4 +28,7 @@ Route::post('surveys-create-api', [SurveysController::class, 'Surveys_Create']);
 
 Route::put('surveys-edit/{id}', [SurveysController::class, 'Surveys_Edit']);
 
+Route::get('get-eligible-surveys', [SurveysController::class, 'getEligibleSurveys']);
 
+
+Route::post('surveys-responses/{surveyId}', [SurveysController::class, 'StoreResponse']);

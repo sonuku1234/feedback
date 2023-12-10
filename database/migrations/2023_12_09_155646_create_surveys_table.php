@@ -12,12 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('surveys', function (Blueprint $table) {
-   
+
 
             $table->id();
             $table->integer('coordinator_id');
             $table->string('name');
             $table->text('questions');
+            $table->integer('min_age')->nullable();
+            $table->integer('max_age')->nullable();
+            $table->enum('gender', ['male', 'female', 'other'])->nullable();
+
             $table->timestamp('start_time');
             $table->timestamp('end_time')->nullable();
             $table->timestamps();

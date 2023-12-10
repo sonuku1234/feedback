@@ -12,6 +12,9 @@ class Surveys extends Model
         'coordinator_id',
         'name',
         'questions',
+        'min_age',
+        'max_age',
+        'gender',
         'start_time',
         'end_time',
     ];
